@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html lang="eng">
+	<head>
+	<meta charset="UTF-8">
+	<title>todo app</title>
+	<link rel="stylesheet" href="{{url_for ('static', filename='main.css')}}">
+	</head>
+	
+	<body class="container">
+		<h1>Todo App</h1>
+		<form action="/add" method="post">
+		<div>
+			<input type="text" name="title" placeholder="Enter Todo...">
+			<br>
+			<br>
+
+			<button class="btn_add" style="font-size:140%" href="#" type="submit">Add new task</button>
+		</div>
+		</form>
+
+		<div class="containerx">	
+		{% for todo in todo_list %}
+		
+		<p style="font-weight:bold;">{{ todo.id }} | {{ todo.title }} </p>
+
+
+		{% if todo.complete == False %}
+	
+	    	<span style="font-weight:bold">Not completed</span>
+		{% else %}
+
+		    <span style="font-weight:bold">Completed</span>
+		{% endif %}
+
+		<a class="btn_update" style="font-weight:bold; margin:10px; padding:5px;"  href="/update/{{ todo.id}}">Update</a>
+			<a  class="btn_delete" style="font-weight:bold; margin-bottom:10px; padding:5px;"  href="/delete/{{ todo.id}}">Delete</a>
+
+			<hr>
+
+
+		{% endfor %}
+
+
+		</div>
+
+		<h3 style="text-align:center; margin-top:90px;">Here you can write you tasks and complete them!</h3>
+	</body>
+</html>
