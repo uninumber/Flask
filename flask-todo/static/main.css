@@ -2,8 +2,6 @@ body
 {
 	background-color:white;
 }
-
-
 .btn_delete
 {
 	background-color:#772722;
@@ -15,8 +13,6 @@ body
 	transition: all 0.3s ease 0s;
 
 }
-
-
 .btn_delete:hover
 {
 	background-color:#000;
@@ -28,10 +24,6 @@ body
 
 
 }
-
-
-
-
 .btn_update
 {
 	background-color:blue;
@@ -41,7 +33,6 @@ body
 	text-decoration:none;
 	color:white;
 	transition:all 0.3s ease 0s;
-
 }
 
 
