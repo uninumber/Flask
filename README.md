@@ -9,7 +9,7 @@ This repo will contain Flask projects()
 
 ### To run on Linux/Windows.
 ```bash
-   flask run
+   python3 app.py/python app.py
 ```
 
 ## Feedback
